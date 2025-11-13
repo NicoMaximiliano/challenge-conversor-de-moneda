@@ -27,3 +27,15 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+
+# Archivos de configuración que contienen credenciales sensibles
+src/main/resources/application.properties
+
+# Opcionalmente, ignorar todos los archivos de propiedades en resources
+# src/main/resources/*.properties
+
+# Siempre es bueno ignorar los directorios de construcción e IDEs
+/target/
+.idea/
+*.iml
