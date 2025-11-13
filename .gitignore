@@ -7,6 +7,7 @@
 # Siempre es bueno ignorar los directorios de construcción e IDEs
 /target/
 .idea/
+lib/
 out/
-src/main/resources/
+resources/
 *.iml
