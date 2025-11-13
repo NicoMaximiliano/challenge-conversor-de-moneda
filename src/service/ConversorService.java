@@ -1,5 +1,7 @@
 package service;
 
+import com.google.gson.*;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
@@ -31,29 +33,36 @@ public class ConversorService {
     }
 
 
-    public String convertir(String monedaOrigen, String monedaDestino, double cantidad) {
-        String json;
+    public double convertir(String monedaOrigen, String monedaDestino, double cantidad) {
+        double tasa = 0;
 
         String url = API_BASE_URL + API_KEY + "/pair/" + monedaOrigen + "/" + monedaDestino + "/" + cantidad;
 
-
         try {
-            HttpRequest request = HttpRequest.newBuilder()
+            HttpRequest solicitud = HttpRequest.newBuilder()
                     .uri(URI.create(url))
                     .build();
 
-            HttpResponse<String> response = client
-                    .send(request, HttpResponse.BodyHandlers.ofString());
+            HttpResponse<String> respuesta = client
+                    .send(solicitud, HttpResponse.BodyHandlers.ofString());
 
-            json = response.body();
+            JsonElement elemento = JsonParser.parseString(respuesta.body());
+            JsonObject objectRoot = elemento.getAsJsonObject();
 
-        } catch (IOException | InterruptedException e) {
-            throw new RuntimeException(e);
+            tasa = objectRoot.get("conversion_result").getAsDouble();
+
+        } catch (IOException e) {
+            System.out.println("Error de comunicación: " + e.getMessage());
+        }
+        catch (InterruptedException e){
+            System.out.println("Error: " + e.getMessage());
         }
         catch (IllegalArgumentException e){
-            throw new RuntimeException("Error en la solicitud: " + e.getMessage());
+            System.out.println("Error en la URI");
         }
 
-        return json;
+        return tasa;
     }
+
+
 }

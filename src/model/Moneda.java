@@ -1,7 +1,4 @@
 package model;
 
-public record Moneda(
-        Float valor,
-        String tipo
-) {
+public record Moneda(double conversion_result) {
 }
