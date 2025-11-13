@@ -1,5 +1,5 @@
 # Archivos de configuración que contienen credenciales sensibles
-src/main/resources/application.properties
+#src/main/resources/application.properties
 
 # Opcionalmente, ignorar todos los archivos de propiedades en resources
 # src/main/resources/*.properties
@@ -7,5 +7,6 @@ src/main/resources/application.properties
 # Siempre es bueno ignorar los directorios de construcción e IDEs
 /target/
 .idea/
-.out/
+out/
+src/main/resources/
 *.iml
