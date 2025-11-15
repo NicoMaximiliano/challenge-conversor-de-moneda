@@ -35,27 +35,27 @@ public class MenuService {
             switch (opc){
                 case 1:
                     resultado = conversorService.convertir(Moneda.ESTADOSUNIDOS.getCodigo(), Moneda.ARGENTINA.getCodigo(), valor);
-                    System.out.println("\nResultado de la conversión: " + resultado);
+                    System.out.println("\nResultado de la conversión: " + String.format("%.2f", resultado));
                     break;
                 case 2:
                     resultado = conversorService.convertir(Moneda.ARGENTINA.getCodigo(), Moneda.ESTADOSUNIDOS.getCodigo(), valor);
-                    System.out.println("\nResultado de la conversión: " + resultado);
+                    System.out.println("\nResultado de la conversión: " + String.format("%.2f", resultado));
                     break;
                 case 3:
                     resultado = conversorService.convertir(Moneda.ESTADOSUNIDOS.getCodigo(), Moneda.BRASIL.getCodigo(), valor);
-                    System.out.println("\nResultado de la conversión: " + resultado);
+                    System.out.println("\nResultado de la conversión: " + String.format("%.2f", resultado));
                     break;
                 case 4:
                     resultado = conversorService.convertir(Moneda.BRASIL.getCodigo(), Moneda.ESTADOSUNIDOS.getCodigo(), valor);
-                    System.out.println("\nResultado de la conversión: " + resultado);
+                    System.out.println("\nResultado de la conversión: " + String.format("%.2f", resultado));
                     break;
                 case 5:
                     resultado = conversorService.convertir(Moneda.ESTADOSUNIDOS.getCodigo(), Moneda.COLOMBIA.getCodigo(), valor);
-                    System.out.println("\nResultado de la conversión: " + resultado);
+                    System.out.println("\nResultado de la conversión: " + String.format("%.2f", resultado));
                     break;
                 case 6:
                     resultado = conversorService.convertir(Moneda.COLOMBIA.getCodigo(), Moneda.ESTADOSUNIDOS.getCodigo(), valor);
-                    System.out.println("\nResultado de la conversión: " + resultado);
+                    System.out.println("\nResultado de la conversión: " + String.format("%.2f", resultado));
                     break;
                 case 7:
                     System.out.println("Saliendo del programa...");
