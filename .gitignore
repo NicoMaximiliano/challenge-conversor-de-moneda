@@ -9,5 +9,5 @@
 .idea/
 lib/
 out/
-*.properties
+src/main/resources/*.properties
 *.iml

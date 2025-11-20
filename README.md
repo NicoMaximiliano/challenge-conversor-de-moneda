@@ -17,19 +17,19 @@ Esto es un programa que realiza la conversion de monedas de diferentes paises, u
 
 ## Capturas del proyecto
 ### Menu de opciones
-![Menu de opciones](assets/screenshots/Menu-de-opciones.jpg)
+![Menu de opciones](src/resources/assets/screenshots/Menu-de-opciones.jpg)
 
 ### Ingresando una opcion
-![Ingresando opcion](assets/screenshots/Ingresando-una-opcion.jpg)
+![Ingresando opcion](src/resources/assets/screenshots/Ingresando-una-opcion.jpg)
 
 ### Ingresando el valor que desea convertir
-![Ingresando valor](assets/screenshots/Ingresando-el-valor-que-desea-convertir.jpg)
+![Ingresando valor](src/resources/assets/screenshots/Ingresando-el-valor-que-desea-convertir.jpg)
 
 ### Mostrando el resultado de la moneda convertida
-![Resultado](assets/screenshots/Mostrando-el-resultado-de-la-moneda-convertida.jpg)
+![Resultado](src/resources/assets/screenshots/Mostrando-el-resultado-de-la-moneda-convertida.jpg)
 
 ### Saliendo del programa
-![Saliendo](assets/screenshots/Saliendo-del-programa.jpg)
+![Saliendo](src/resources/assets/screenshots/Saliendo-del-programa.jpg)
 
 ## Tecnologias
 
